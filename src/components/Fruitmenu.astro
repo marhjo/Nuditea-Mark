@@ -1,0 +1,133 @@
+---
+---
+<div class="frame_container">
+<div class="big">
+<h2>Frugt Te</h2>
+<ul class="first_column">
+<li>Abrikos</li>
+<li>Ananas</li>
+<li>Anis</li>
+<li>Appelsin</li>
+<li>Banan</li>
+<li>Blodappelsin</li>
+<li>Blåbær</li>
+<li>Brombær</li>
+<li>Citron</li>
+<li>Fersken</li>
+<li>Granatæble</li>
+<li>Grøn æble</li>
+<li>Guava</li>
+<li>Hibiscus</li>
+<li>Hindbær</li>
+<li>Honning</li>
+<li>Honningmelon</li>
+<li>Hyldeblomst</li>
+<li>Ingefær</li>
+<li>Jordbær</li>
+</ul>
+<ul class="second_column">
+    <li>Karamel</li>
+    <li>Kaffe</li>
+    <li>Kirsebær</li>
+    <li>Kiwi</li>
+    <li>Kokos</li>
+    <li>Kærlighedsfrugt</li>
+    <li>Lavendel</li>
+    <li>Lime</li>
+    <li>Mango</li>
+    <li>Passionsfrugt</li>
+    <li>Pink Grape</li>
+    <li>Rose</li>
+    <li>Solbær</li>
+    <li>Surt slik</li>
+    <li>Tranebær</li>
+    <li>Tyggegummi</li>
+    <li>Vandmelon</li>
+    <li>Vanilje</li>
+    <li>Vindrue</li>
+    </ul>
+<div class="sugarfree">
+<h3>Sukkerfrie</h3>
+<p>Hasselnød / Karamel / Vanilje</p>
+<p>Kan serveres kold eller varm</p>
+</div>
+<img src="/svgs/hand.svg" alt="" id="handsvg">
+<img src="/svgs/crystal.svg" alt="" id="crystalsvg">
+<slot/>
+</div>
+</div>
+
+<style>
+.frame_container{
+    width: 100%;
+}
+.big{
+    background-image: url("../imgs/frame_big.jpg");
+    background-repeat: no-repeat;
+    height: 1155px;
+    width: 743px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 5fr 2fr;
+}
+
+#handsvg{
+    width: 11.5rem;
+    position:absolute;
+    left: 45%;
+    top: 10%;
+}
+#crystalsvg{
+    width: 9rem;
+    position:absolute;
+    left: 65%;
+    bottom: 10%;
+}
+
+h2{
+    grid-column: 1/2;
+    justify-self: end;
+    height: fit-content;
+    align-self: end;
+
+    font-size: 40px;
+}
+.first_column{
+    width: fit-content;
+    list-style: none;
+    grid-column: 1/2;
+    width: 10rem;
+    justify-self: end;
+
+    font-size: 24px;
+}
+.second_column{
+    width: fit-content;
+    list-style: none;
+    grid-column: 2/3;
+
+    font-size: 24px;
+}
+.sugarfree{
+grid-column: 1/3;
+justify-self: center;
+text-align: center;
+}
+h3{
+    font-size: 30px;
+}
+.sugarfree p:first-of-type{
+    font-size: 24px;
+}
+.sugarfree p:last-of-type{
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .framebackground{
+    background-image: none;
+    background-color: aqua;
+}
+  }
+</style>
