@@ -1,0 +1,101 @@
+---
+import Icons from "../components/Icons.astro";
+const { variant, link, leadto } = Astro.props;
+---
+
+<footer>
+  <section id="footercontent">
+    <div id="kontaktinfo">
+      <p class="kontakt">Kontakt os:</p>
+      <p>NudiTea ApS</p>
+      <a href="tel:+4531423701">31 42 37 01</a><br />
+      <a
+        href="https://www.google.com/maps/place/S%C3%B8borg+Torv+7,+2860+S%C3%B8borg/@55.7363758,12.5057778,17z/data=!3m1!4b1!4m6!3m5!1s0x465251f9a70d85cb:0xeda748a17a70b140!8m2!3d55.7363728!4d12.5083581!16s%2Fg%2F11csclgmkz"
+      >
+        Søborg Torv 7, 2860 Søborg</a
+      >
+      <p>CVR: 41934301</p>
+    </div>
+    <p class="copyright">Copyright NudiTea 2023© All Rights Reserved</p>
+    <div class="allicons">
+      <div class="firstrow">
+        <Icons
+          variant="primary"
+          icon="../public/icons/facebookgold.svg"
+          link=""
+          leadto=""
+        />
+        <Icons
+          variant="primary"
+          icon="../public/icons/instagramgold.svg"
+          link="https://www.instagram.com/nuditea.dk/?hl=en"
+          leadto=""
+        />
+        <Icons
+          variant="primary"
+          icon="../public/icons/trustpilotgold.svg"
+          link="https://dk.trustpilot.com/review/nuditea.dk"
+          leadto=""
+        />
+      </div>
+      <div class="secondrow">
+        <Icons
+          variant="primary"
+          icon="../public/icons/woltgold.svg"
+          link="https://wolt.com/en/dnk/lyngby-gentofte/restaurant/nuditea"
+          leadto=""
+        />
+        <Icons
+          variant="primary"
+          icon="../public/icons/justeatgold.svg"
+          link="https://www.just-eat.dk/en/menu/nuditea"
+          leadto=""
+        />
+        <Icons
+          variant="primary"
+          icon="../public/icons/foodoragold.svg"
+          link="https://www.foodora.dk/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEGV1Rv0FQJiU0UCoy-LDv1m0K6IUqlm108m30_Ii0_lH-3mPVPbP-hoCpFwQAvD_BwE"
+          leadto=""
+        />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    footer {
+      background-color: transparent;
+      /* background-size: cover; */
+      background-position: center;
+      background-attachment: fixed;
+      object-fit: cover;
+    }
+
+    .kontakt {
+      color: #d9960a;
+    }
+
+    #footercontent {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+      padding: 5rem;
+    }
+
+    .copyright {
+      color: #d9960a;
+      display: flex;
+      align-self: end;
+    }
+
+    .firstrow,
+    .secondrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.2rem;
+    }
+    .allicons {
+    }
+  </style>
+</footer>

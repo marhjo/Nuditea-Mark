@@ -1,0 +1,33 @@
+---
+const { variant, link, leadto, type, icon } = Astro.props;
+---
+
+<button class={variant} type={type}>
+  <img src={icon} alt="" />
+  <a href={link} target={leadto}><slot /></a>
+</button>
+
+<style>
+  .button {
+  }
+  .primary {
+    width: 3rem;
+    height: 3rem;
+    border: solid 2px #d9960a;
+    background-color: #1d1b41;
+    border-radius: 50%;
+  }
+
+  .primary:hover {
+    width: 3rem;
+    height: 3rem;
+    border: solid 2px #1d1b41;
+
+    background-color: #d9960a;
+
+    border-radius: 50%;
+  }
+
+  .type {
+  }
+</style>
