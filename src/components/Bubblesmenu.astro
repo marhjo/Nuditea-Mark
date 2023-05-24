@@ -2,7 +2,9 @@
 ---
 <div class="frame_container">
 <div class="big">
-<h2>Mælke Te</h2>
+<h2>Bubbles</h2>
+<div class="firstsection">
+<h3>Poppende Perler</h3>
 <ul class="first_column">
 <li>Ananas</li>
 <li>Banan</li>
@@ -38,15 +40,51 @@
     <li>Vandmelon</li>
     <li>Vanilje</li>
     </ul>
-<div class="sugarfree">
-<h3>Sukkerfrie</h3>
-<p>Hasselnød / Karamel / Vanilje</p>
-<p>Kan serveres kold eller varm</p>
+</div>
+<div class="secondsection">
+<h3>Ikke Poppende Perler</h3>
+<ul class="first_column">
+<li>Ananas</li>
+<li>Banan</li>
+<li>Blåbær</li>
+<li>Brownsugar</li>
+<li>Chai</li>
+<li>Chokolade</li>
+<li>Fersken</li>
+<li>Flødekaramel</li>
+<li>Grønæble</li>
+<li>Hasselnød</li>
+<li>Hindbær</li>
+<li>Honning</li>
+<li>Honningmelon</li>
+<li>Jasmin</li>
+<li>Kaffe</li>
+<li>Karamel</li>
+</ul>
+<ul class="second_column">
+    <li>Kokos</li>
+    <li>Kærlighedsfrugt</li>
+    <li>Lavendel</li>
+    <li>Mango</li>
+    <li>Marcipan</li>
+    <li>Matcha</li>
+    <li>Passionsfrugt</li>
+    <li>Pebermynte</li>
+    <li>Pistacie</li>
+    <li>Taro</li>
+    <li>Tiramisu</li>
+    <li>Tyggegummi</li>
+    <li>Saltkaramel</li>
+    <li>Vandmelon</li>
+    <li>Vanilje</li>
+    </ul>
 </div>
 <img src="/svgs/hand.svg" alt="" id="handsvg">
 <img src="/svgs/crystal.svg" alt="" id="crystalsvg">
 </div>
 </div>
+
+<!-- Få kolonner inde i div first og div second til at placeres korrekt, centrer / end. Efter bubbles kommer varme drikke og så hele menu maskinen ;-) -->
 
 <style>
 .frame_container{
@@ -60,7 +98,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 5fr 2fr;
+    grid-template-rows: 2fr 5fr;
 }
 
 #handsvg{
@@ -84,6 +122,14 @@ h2{
 
     font-size: 40px;
 }
+.firstsection{
+    grid-column: 1/3;
+}
+.secondsection{
+    grid-column: 1/3;
+}
+
+
 .first_column{
     width: fit-content;
     list-style: none;
