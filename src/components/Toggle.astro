@@ -1,0 +1,97 @@
+---
+import "../styles/master.css";
+---
+
+<div>
+  <div class="button r" id="button">
+    <input type="checkbox" class="checkbox" />
+    <div class="ball"></div>
+    <div class="bg"></div>
+  </div>
+</div>
+
+<style>
+  .ball,
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+
+  .button.r,
+  .button.r .bg {
+    border-radius: 100px;
+  }
+
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .ball {
+    z-index: 2;
+  }
+
+  .bg {
+    width: 100%;
+    background-color: transparent;
+    transition: 0.3s ease all;
+    z-index: 1;
+    border: 2px solid var(--colour-gold);
+  }
+
+  /* Button 3 */
+  #button .ball:before {
+    content: "DA";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: var(--colour-gold);
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+
+  #button .checkbox:active + .ball:before {
+    width: 46px;
+    border-radius: 100px;
+  }
+
+  #button .checkbox:checked:active + .ball:before {
+    margin-left: -26px;
+  }
+
+  #button .checkbox:checked + .ball:before {
+    content: "EN";
+    left: 42px;
+    background-color: var(--colour-gold);
+  }
+
+  #button .checkbox:checked ~ .bg {
+    background-color: transparent;
+  }
+</style>
