@@ -4,15 +4,16 @@
 }
 
 :root {
-  --font-title: "Playfair";
-  --font-main: "Inter", sans-serif;
+  --font-title: "Playfair Display", sans-serif;
+  --font-main: Roboto, sans-serif;
 
-  --colour-primary: #;
-  --colour-text: #;
-  --colour-text2: #;
-  --colour-base: #;
-  --colour-secondary: #;
-  --colour-overlay: #;
+  --colour-red: #580918;
+  --colour-blue: #1d1b41;
+  --colour-gold: #d9960a;
+
+  --colour-titletext: #d9960a;
+  --colour-text: #ffffff;
+  --colour-base: #1d1b41;
 }
 
 * {
