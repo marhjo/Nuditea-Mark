@@ -1,0 +1,78 @@
+---
+import "../styles/master.css";
+---
+
+<div id="scroll-to-top">
+  <span>&ShortUpArrow;</span>
+</div>
+
+<div id="scroll-to-bottom">
+  <span>&ShortDownArrow;</span>
+</div>
+
+<style>
+  #scroll-to-top,
+  #scroll-to-bottom {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 46px;
+    cursor: pointer;
+    color: var(--colour-gold);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  #scroll-to-top:hover,
+  #scroll-to-bottom:hover {
+    transform: scale(1.1);
+  }
+
+  #scroll-to-top {
+    display: none;
+  }
+</style>
+
+<script>
+  const scrollToTop = document.querySelector<HTMLElement>("#scroll-to-top");
+  const scrollToBottom =
+    document.querySelector<HTMLElement>("#scroll-to-bottom");
+
+  if (scrollToTop && scrollToBottom) {
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        scrollToTop.style.display = "block";
+        scrollToBottom.style.display = "none";
+      } else {
+        scrollToTop.style.display = "none";
+        scrollToBottom.style.display = "block";
+      }
+    };
+
+    function scrollToTopFunction() {
+      if (window.scrollTo) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        document.body.scrollTop = 0;
+      }
+    }
+
+    function scrollToBottomFunction() {
+      if (window.scrollTo) {
+        window.scrollTo({ top: 999999, behavior: "smooth" });
+      } else {
+        document.body.scrollTop = 999999;
+      }
+    }
+
+    scrollToTop.addEventListener("click", scrollToTopFunction);
+    scrollToBottom.addEventListener("click", scrollToBottomFunction);
+  }
+</script>
