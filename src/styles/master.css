@@ -1,11 +1,36 @@
+/* @font-face {
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
+
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+} */
 @font-face {
-  font-family: "";
-  src: url("");
+  font-family: "Playfair Display regular";
+  src: url("../font/Playfair_Display/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Playfair Display bold";
+  src: url("../font/Playfair_Display/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto regular";
+  src: url("../font/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto_light";
+  src: url("../font/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto light italic";
+  src: url("../font/Roboto/Roboto-LightItalic.ttf");
 }
 
 :root {
-  --font-title: "Playfair Display", sans-serif;
-  --font-main: Roboto, sans-serif;
+  --font-title: "Playfair Display regular";
+  --font-title-bold: "Playfair Display bold";
+  --font-main: "Roboto regular";
+  --font-main-light: "Roboto_light";
+  --font-main-italic: "Roboto light italic";
 
   --colour-red: #580918;
   --colour-blue: #1d1b41;
@@ -43,4 +68,13 @@ h3,
 h4,
 h5 {
   font-family: var(--font-title);
+  color: var(--colour-titletext);
+  letter-spacing: 0.1rem;
+  font-weight: lighter;
+}
+
+ul li {
+  font-size: 24px;
+  font-family: var(--font-main-light);
+  line-height: 32px;
 }
