@@ -1,4 +1,100 @@
 ---
+import Favoritcard from "../components/Favoritcard.astro";
+import Fruitmenu from "../components/Fruitmenu.astro";
+import Milkmenu from "../components/Milkmenu.astro";
+import Bubblesmenu from "../components/Bubblesmenu.astro";
+import Warmmenu from "../components/Warmmenu.astro";
+import Toggle from "../components/Toggle.astro";
+import Normalbutton from "../components/Normalbutton.astro";
 ---
 
-<style></style>
+<section class="menusection">
+  <h1>Menukort</h1>
+  <div class="tooglediv">
+    <h3>DA/EN</h3>
+    <Toggle />
+  </div>
+  <div class="buttons">
+    <div class="firstrow">
+      <Normalbutton state="default" id="favknap">Favoritter</Normalbutton>
+      <Normalbutton state="default" id="fruitknap">Frugt Te</Normalbutton>
+      <Normalbutton state="default" id="milkknap">Mælke Te</Normalbutton>
+    </div>
+    <div class="secondrow">
+      <Normalbutton state="default" id="bubbleknap">Bubbles</Normalbutton>
+      <Normalbutton state="default" id="warmknap">Varme drikke</Normalbutton>
+    </div>
+  </div>
+  <div class="menutypes">
+    <div id="fav" class="hide"><Favoritcard /></div>
+    <div id="fruit" class="hide"><Fruitmenu /></div>
+    <div id="milk" class="hide"><Milkmenu /></div>
+    <div id="bubble" class="hide"><Bubblesmenu /></div>
+    <div id="warm" class="hide"><Warmmenu /></div>
+  </div>
+</section>
+
+<style>
+  .menusection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr auto;
+    justify-items: center;
+    /* height: 1650px; */
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .tooglediv {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+  .firstrow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .secondrow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 24rem;
+  }
+
+  .menutypes {
+    grid-row: 4/5;
+  }
+  .hide {
+    display: none;
+  }
+  #fav,
+  #fruit,
+  #milk,
+  #bubble,
+  #warm {
+    position: relative;
+  }
+
+  @media (max-width: 800px) {
+    .menusection {
+      grid-template-rows: 1fr 1fr 2fr 5fr;
+    }
+    .buttons {
+      grid-template-rows: 1fr;
+    }
+    .firstrow {
+      grid-template-columns: 1fr;
+    }
+    .secondrow {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  }
+</style>
