@@ -21,6 +21,7 @@
     <style>
     .frame_container{
         width: 100%;
+        display: grid;
     }
     .small{
         background-image: url("../imgs/frame_small.jpg");
@@ -76,10 +77,51 @@
         font-size: 24px;
     }
     
-    @media (max-width: 600px) {
-        .framebackground{
-        background-image: none;
-        background-color: aqua;
-    }
-      }
+    @media (max-width: 800px) {
+.small{
+    background-image: none;
+    /* background-color: var(--colour-red); */
+    background-color: #580918;
+    width: 90%;
+    height: 580px;
+    justify-self: center;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 3fr 2fr 5fr;
+}
+#handsvg{
+    width: 6.5rem;
+    left: 50%;
+    top: 5%;
+}
+#crystalsvg{
+    width: 6rem;
+    left: 65%;
+    bottom: 10%;
+}
+
+h2{
+    font-size: 32px;
+    align-self: center;
+}
+h3{
+    font-size: 24px;
+}
+
+.first_column{
+    font-size: 16px;
+    grid-column: 2/3;
+    width: 8rem;
+    height: fit-content;
+    margin: 0;
+}
+.second_column{
+    font-size: 16px;
+    padding-left: 1rem;
+    grid-column: 2/3;
+    height: fit-content;
+    padding-left: 0;
+    margin: 0;
+}
+  }
     </style>

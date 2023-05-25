@@ -25,7 +25,7 @@
     </ul>
 </div>
 <div class="secondsection">
-<h3>Ikke Poppende Perler</h3>
+<h3>Ikke Poppende</h3>
 <p>(Tapioca & Jelly)</p>
 <ul class="first_column">
     <li>Tapioca - Brun Sukker</li>
@@ -45,6 +45,7 @@
 <style>
 .frame_container{
     width: 100%;
+    display: grid;
 }
 .big{
     background-image: url("../imgs/frame_big.jpg");
@@ -137,9 +138,41 @@ h3{
 }
 
 @media (max-width: 800px) {
-    .big{
+.big{
     background-image: none;
-    background-color: aqua;
+    /* background-color: var(--colour-red); */
+    background-color: #580918;
+    width: 90%;
+    height: 860px;
+    justify-self: center;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+#handsvg{
+    width: 6.5rem;
+    left: 50%;
+    top: 5%;
+}
+#crystalsvg{
+    width: 6rem;
+    left: 65%;
+    bottom: 10%;
+}
+
+h2{
+    font-size: 32px;
+    align-self: center;
+}
+h3{
+    font-size: 24px;
+}
+
+.first_column{
+    font-size: 16px;
+}
+.second_column{
+    font-size: 16px;
+    padding-left: 1rem;
 }
   }
 </style>

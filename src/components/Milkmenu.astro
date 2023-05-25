@@ -4,22 +4,22 @@
 <div class="big">
 <h2>Mælke Te</h2>
 <ul class="first_column">
-<li>Ananas</li>
-<li>Banan</li>
-<li>Blåbær</li>
-<li>Brownsugar</li>
-<li>Chai</li>
-<li>Chokolade</li>
-<li>Fersken</li>
-<li>Flødekaramel</li>
-<li>Grønæble</li>
-<li>Hasselnød</li>
-<li>Hindbær</li>
-<li>Honning</li>
-<li>Honningmelon</li>
-<li>Jasmin</li>
-<li>Kaffe</li>
-<li>Karamel</li>
+    <li>Ananas</li>
+    <li>Banan</li>
+    <li>Blåbær</li>
+    <li>Brownsugar</li>
+    <li>Chai</li>
+    <li>Chokolade</li>
+    <li>Fersken</li>
+    <li>Flødekaramel</li>
+    <li>Grønæble</li>
+    <li>Hasselnød</li>
+    <li>Hindbær</li>
+    <li>Honning</li>
+    <li>Honningmelon</li>
+    <li>Jasmin</li>
+    <li>Kaffe</li>
+    <li>Karamel</li>
 </ul>
 <ul class="second_column">
     <li>Kokos</li>
@@ -51,6 +51,7 @@
 <style>
 .frame_container{
     width: 100%;
+    display: grid;
 }
 .big{
     background-image: url("../imgs/frame_big.jpg");
@@ -116,10 +117,49 @@ h3{
     font-size: 16px;
 }
 
-@media (max-width: 600px) {
-    .framebackground{
+@media (max-width: 800px) {
+.big{
     background-image: none;
-    background-color: aqua;
+    /* background-color: var(--colour-red); */
+    background-color: #580918;
+    width: 90%;
+    height: 860px;
+    justify-self: center;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+#handsvg{
+    width: 6.5rem;
+    left: 50%;
+    top: 5%;
+}
+#crystalsvg{
+    width: 6rem;
+    left: 65%;
+    bottom: 10%;
+}
+
+h2{
+    font-size: 32px;
+    align-self: center;
+    grid-column: 2/4;
+}
+h3{
+    font-size: 24px;
+}
+.sugarfree p:first-of-type{
+    font-size: 16px;
+}
+.sugarfree p:last-of-type{
+    font-size: 16px;
+}
+.first_column{
+    font-size: 16px;
+    width: 6rem;
+}
+.second_column{
+    font-size: 16px;
+    padding-left: 1rem;
 }
   }
 </style>
