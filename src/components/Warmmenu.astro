@@ -1,127 +1,128 @@
 ---
 ---
+
 <div class="frame_container">
-    <div class="small">
+  <div class="small">
     <h2>Varme drikke</h2>
     <ul class="first_column">
-        <li>Espresso 20 kr.</li>
-        <li>Americano 30 kr.</li>
-        <li>Café Latte 40 kr.</li>
+      <li>Espresso 20 kr.</li>
+      <li>Americano 30 kr.</li>
+      <li>Café Latte 40 kr.</li>
     </ul>
     <ul class="second_column">
-        <li>Te 30 kr.</li>
-        <li>Chai Latte 40 kr.</li>
-        <li>Kakao 40 / 60 kr.</li>
-        </ul>
-    <img src="/svgs/hand.svg" alt="" id="handsvg">
-    <img src="/svgs/crystal.svg" alt="" id="crystalsvg">
-    </div>
-    </div>
-    
-    <style>
-    .frame_container{
-        width: 100%;
-        display: grid;
-    }
-    .small{
-        background-image: url("../imgs/frame_small.jpg");
-        background-repeat: no-repeat;
-        height: 810px;
-        width: 743px;
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 2fr 5fr;
-    }
-    
-    #handsvg{
-        width: 11.5rem;
-        position:absolute;
-        left: 45%;
-        top: 10%;
-    }
-    #crystalsvg{
-        width: 9rem;
-        position:absolute;
-        left: 65%;
-        bottom: 10%;
-    }
-    
-    h2{
-        grid-column: 2/4;
-        justify-self: start;
-        height: fit-content;
-        align-self: end;
-    
-        font-size: 40px;
-    }
-    ul li{
-        margin-top: 2rem;
-    }
-    .first_column{
-        width: fit-content;
-        list-style: none;
-        width: 11rem;
-        grid-column: 2/3;
-        justify-self: start;
-        padding: 0;
-    
-        font-size: 24px;
-    }
-    .second_column{
-        width: fit-content;
-        list-style: none;
-        width: 11rem;
-        grid-column: 3/4;
-    
-        font-size: 24px;
-    }
-    
-    @media (max-width: 800px) {
-.small{
-    background-image: none;
-    /* background-color: var(--colour-red); */
-    background-color: #580918;
-    width: 90%;
-    height: 580px;
-    justify-self: center;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 3fr 2fr 5fr;
-}
-#handsvg{
-    width: 6.5rem;
-    left: 50%;
-    top: 5%;
-}
-#crystalsvg{
-    width: 6rem;
+      <li>Te 30 kr.</li>
+      <li>Chai Latte 40 kr.</li>
+      <li>Kakao 40 / 60 kr.</li>
+    </ul>
+    <img src="/svgs/hand.svg" alt="" id="handsvg" />
+    <img src="/svgs/crystal.svg" alt="" id="crystalsvg" />
+  </div>
+</div>
+
+<style>
+  .frame_container {
+    width: 100%;
+    display: grid;
+  }
+  .small {
+    background-image: url("../imgs/frame_small.jpg");
+    background-repeat: no-repeat;
+    height: 810px;
+    width: 743px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 5fr;
+  }
+
+  #handsvg {
+    width: 11.5rem;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+  }
+  #crystalsvg {
+    width: 9rem;
+    position: absolute;
     left: 65%;
     bottom: 10%;
-}
-
-h2{
-    font-size: 32px;
-    align-self: center;
-}
-h3{
-    font-size: 24px;
-}
-
-.first_column{
-    font-size: 16px;
-    grid-column: 2/3;
-    width: 8rem;
-    height: fit-content;
-    margin: 0;
-}
-.second_column{
-    font-size: 16px;
-    padding-left: 1rem;
-    grid-column: 2/3;
-    height: fit-content;
-    padding-left: 0;
-    margin: 0;
-}
   }
-    </style>
+
+  h2 {
+    grid-column: 2/4;
+    justify-self: start;
+    height: fit-content;
+    align-self: end;
+
+    font-size: 40px;
+  }
+  ul li {
+    margin-top: 2rem;
+  }
+  .first_column {
+    width: fit-content;
+    list-style: none;
+    width: 12rem;
+    grid-column: 2/3;
+    justify-self: start;
+    padding: 0;
+
+    font-size: 24px;
+  }
+  .second_column {
+    width: fit-content;
+    list-style: none;
+    width: 12rem;
+    grid-column: 3/4;
+
+    font-size: 24px;
+  }
+
+  @media (max-width: 800px) {
+    .small {
+      background-image: none;
+      /* background-color: var(--colour-red); */
+      background-color: #580918;
+      width: 90%;
+      height: 580px;
+      justify-self: center;
+      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 3fr 2fr 5fr;
+    }
+    #handsvg {
+      width: 6.5rem;
+      left: 50%;
+      top: 5%;
+    }
+    #crystalsvg {
+      width: 6rem;
+      left: 65%;
+      bottom: 10%;
+    }
+
+    h2 {
+      font-size: 32px;
+      align-self: center;
+    }
+    h3 {
+      font-size: 24px;
+    }
+
+    .first_column {
+      font-size: 16px;
+      grid-column: 2/3;
+      width: 8rem;
+      height: fit-content;
+      margin: 0;
+    }
+    .second_column {
+      font-size: 16px;
+      padding-left: 1rem;
+      grid-column: 2/3;
+      height: fit-content;
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+</style>
