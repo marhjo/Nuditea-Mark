@@ -42,6 +42,13 @@ import Normalbutton from "../components/Normalbutton.astro";
     justify-items: center;
     /* height: 1650px; */
   }
+  #fav,
+  #fruit,
+  #milk,
+  #bubble,
+  #warm {
+    width: 100%;
+  }
   h1 {
     font-size: 45px;
   }
@@ -74,17 +81,10 @@ import Normalbutton from "../components/Normalbutton.astro";
   .hide {
     display: none;
   }
-  #fav,
-  #fruit,
-  #milk,
-  #bubble,
-  #warm {
-    position: relative;
-  }
 
   @media (max-width: 800px) {
     .menusection {
-      grid-template-rows: 1fr 1fr 2fr 5fr;
+      grid-template-rows: 1fr 1fr 2fr auto;
     }
     .buttons {
       grid-template-rows: 1fr;
