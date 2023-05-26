@@ -1,49 +1,55 @@
 ---
-const {state,link}=Astro.props;
+const { state, link, id } = Astro.props;
 ---
 
-<!-- Vælg mellem default eller active state -->
-<!-- Indsæt evt. link, hvis knappen fører et sted hen -->
-<button class={state}>
-    <a href={link}><slot /></a>
-  </button>
+<!-- Vælg mellem default eller active state --><!-- Indsæt evt. link, hvis knappen fører et sted hen -->
+<button class={state} id={id}>
+  <a href={link}><slot /></a>
+</button>
 
 <style>
-    a{
+  a {
     text-decoration: none;
-}
- .default {
+    font-family: var(--font-title);
+    font-size: 16px;
+    color: var(--colour-gold);
+  }
+  .default {
     width: 10rem;
     border-style: solid;
     border-width: 0.15rem;
-    border-color: #D9960A;
+    border-color: #d9960a;
     border-radius: 0.6rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-color: #D9960A;
-    background-color: #1D1B41;
-    color: #D9960A;
+    border-color: #d9960a;
+    background-color: #1d1b41;
+    color: #d9960a;
     font-size: 20px;
+    margin: 1rem;
   }
   .default:hover {
-    background-color:  #D9960A;
-    border-color:  #D9960A;
-    color: #ffffff;
+    background-color: #d9960a;
+    border-color: #d9960a;
+  }
+  .default:hover a {
+    color: var(--colour-text);
   }
   .active {
     width: 10rem;
     border-style: solid;
     border-width: 0.15rem;
-    border-color: #D9960A;
+    border-color: #d9960a;
     border-radius: 0.6rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    /* padding: 1rem 1.9rem 1rem 1.9rem; */
-    /* Skal udskiftes til variabler */
-    border-color: #D9960A;
-    background-color:  #D9960A;
+    border-color: #d9960a;
+    background-color: #d9960a;
     color: #ffffff;
     font-size: 20px;
+    margin: 1rem;
   }
-
+  .active a {
+    color: var(--colour-text);
+  }
 </style>

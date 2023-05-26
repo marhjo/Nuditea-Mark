@@ -1,28 +1,12 @@
 ---
-import Favoritcard from "../components/Favoritcard.astro";
-import Fruitmenu from "../components/Fruitmenu.astro";
-import Milkmenu from "../components/Milkmenu.astro";
-import Bubblesmenu from "../components/Bubblesmenu.astro";
-import Warmmenu from "../components/Warmmenu.astro";
+import Mainlayout from "../components/Mainlayout.astro";
+import Menusection from "../components/Menusection.astro";
 import "../styles/master.css";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-    <Favoritcard />
-    <Fruitmenu />
-    <Milkmenu />
-    <Bubblesmenu />
-    <Warmmenu />
-  </body>
-</html>
+<Mainlayout title="NudiTea - Forside">
+  <Menusection />
+  <script src="../scripts/menusection.js"></script>
+</Mainlayout>
 
 <style></style>
