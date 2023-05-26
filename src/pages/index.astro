@@ -4,13 +4,12 @@ import Menusection from "../components/Menusection.astro";
 import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/burger.css";
 import "../styles/master.css";
 ---
 
+<!-- husk at sætte burgermnu og navbar i en header og andet indhold (undtagen footer) i en main :-) -->
 <Mainlayout title="NudiTea - Forside">
-  <Navbar />
-  <Burgermenu />
-  <Menusection />
   <Footer />
   <script src="../scripts/menusection.js"></script>
 </Mainlayout>

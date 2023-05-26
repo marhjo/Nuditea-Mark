@@ -1,0 +1,24 @@
+@media (max-width: 770px) {
+  header {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    height: 10rem;
+  }
+  .hide {
+    transition: ease-out;
+    transition-delay: 2s;
+    /* display: none; */
+    animation: maingone;
+  }
+  @keyframes maingone {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+  .hide2 {
+    display: none;
+  }
+}

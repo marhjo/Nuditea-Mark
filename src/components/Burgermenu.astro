@@ -31,6 +31,10 @@ import "../styles/master.css";
   @media (max-width: 770px) {
     .burger {
       display: block;
+      margin: 1rem;
+      position: fixed;
+      justify-self: end;
+      z-index: 2;
     }
 
     .burger.active .nav:nth-child(2) {
@@ -42,21 +46,6 @@ import "../styles/master.css";
     }
     .burger.active .nav:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-buttons {
-      position: fixed;
-      left: -100%;
-      top: 70px;
-      flex-direction: column;
-      background-color: var(--colour-red: #580918);
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .nav-buttons.active {
-      left: 0;
     }
   }
 </style>
