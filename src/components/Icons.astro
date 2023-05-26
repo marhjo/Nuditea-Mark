@@ -1,0 +1,112 @@
+---
+const { variant, link, leadto, type, icon } = Astro.props;
+---
+
+<button type={type}>
+  <div class="primary"><div class={icon}></div></div>
+  <a href={link} target={leadto}><slot /></a>
+</button>
+
+<style>
+  button {
+    margin: 0.2rem;
+  }
+  .primary {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    border: solid 2px #d9960a;
+    background-color: #1d1b41;
+    border-radius: 50%;
+  }
+
+  .primary:hover {
+    width: 3rem;
+    height: 3rem;
+    border: solid 2px #1d1b41;
+    background-color: #d9960a;
+    border-radius: 50%;
+  }
+  .facebook {
+    background-image: url("../icons/facebookgold.svg");
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  .primary:hover .facebook {
+    background-image: url("../icons/facebookblue.svg");
+  }
+
+  .instagram {
+    background-image: url("../icons/instagramgold.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .primary:hover .instagram {
+    background-image: url("../icons/instagramblue.svg");
+  }
+
+  .trustpilot {
+    background-image: url("../icons/trustpilotgold.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  .primary:hover .trustpilot {
+    background-image: url("../icons/trustpilotblue.svg");
+  }
+
+  .justeat {
+    background-image: url("../icons/justeatgold.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  .primary:hover .justeat {
+    background-image: url("../icons/justeatblue.svg");
+  }
+
+  .wolt {
+    background-image: url("../icons/woltgold.svg");
+    background-repeat: no-repeat;
+    width: 2.5rem;
+    height: 1rem;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  .primary:hover .wolt {
+    background-image: url("../icons/woltblue.svg");
+  }
+
+  .foodora {
+    background-image: url("../icons/foodoragold.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+    justify-self: center;
+    background-size: contain;
+  }
+
+  .primary:hover .foodora {
+    background-image: url("../icons/foodorablue.svg");
+  }
+</style>
