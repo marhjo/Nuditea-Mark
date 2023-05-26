@@ -1,0 +1,62 @@
+---
+import "../styles/master.css";
+---
+
+<!--- Burgermenu starter -->
+<div class="burger">
+  <span class="nav"></span>
+  <span class="nav"></span>
+  <span class="nav"></span>
+</div>
+<script src="../scripts/burger.js"></script>
+
+<!--- Burgermenu slutter -->
+
+<style>
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 6px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--colour-text);
+  }
+
+  @media (max-width: 770px) {
+    .burger {
+      display: block;
+    }
+
+    .burger.active .nav:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active .nav:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active .nav:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-buttons {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: var(--colour-red: #580918);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .nav-buttons.active {
+      left: 0;
+    }
+  }
+</style>
