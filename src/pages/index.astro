@@ -4,6 +4,7 @@ import Menusection from "../components/Menusection.astro";
 import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
 import Footer from "../components/Footer.astro";
+import Videosection from "../components/Videosection.astro";
 import "../styles/burger.css";
 import "../styles/master.css";
 ---
@@ -11,7 +12,7 @@ import "../styles/master.css";
 <!-- husk at sætte burgermnu og navbar i en header og andet indhold (undtagen footer) i en main :-) -->
 <Mainlayout title="NudiTea - Forside">
   <!-- Dette er pop-up beskeden -->
-  <script>
+  <!-- <script>
     function showPopup() {
       alert("This is a School Project");
       localStorage.setItem("popupShown", "true");
@@ -23,8 +24,9 @@ import "../styles/master.css";
         showPopup();
       }
     };
-  </script>
+  </script> -->
   <!-- -------------------------- -->
-  <Menusection />
+  <!-- <Menusection /> -->
+  <Videosection />
   <script src="../scripts/menusection.js"></script>
 </Mainlayout>
