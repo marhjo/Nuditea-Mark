@@ -5,6 +5,19 @@ import "../styles/master.css";
 ---
 
 <Mainlayout title="NudiTea - Forside">
+  <script>
+    function showPopup() {
+      alert("This is a School Project");
+      localStorage.setItem("popupShown", "true");
+    }
+
+    window.onload = function () {
+      var popupShown = localStorage.getItem("popupShown");
+      if (!popupShown) {
+        showPopup();
+      }
+    };
+  </script>
   <Menusection />
   <script src="../scripts/menusection.js"></script>
 </Mainlayout>
