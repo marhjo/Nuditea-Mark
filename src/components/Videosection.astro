@@ -20,7 +20,14 @@
   <div class="video">
     <video autoplay loop muted class="videotype">
       <source src="/videos/vid-cover-nuditea-comp3.webm" type="video/webm" />
-      <source src="/videos/vid-cover-nuditea-comp2.mp4" type="video/webm" />
+      <source src="/videos/vid-cover-nuditea-comp2.mp4" type="video/mp4" />
+      Your browser does not support the video tag. Try another browser.
+    </video>
+  </div>
+  <div class="video_mobile">
+    <video autoplay loop muted class="videotype">
+      <source src="/videos/vid-cover-nuditea-mobile-comp3.webm" type="video/webm" />
+      <source src="/videos/vid-cover-nuditea-mobile-comp2.mp4" type="video/mp4" />
       Your browser does not support the video tag. Try another browser.
     </video>
   </div>
@@ -33,6 +40,8 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
     align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .keywords {
     grid-column: 1/6;
@@ -73,6 +82,7 @@
   .view_video a:last-of-type {
     color: var(--colour-gold);
     text-decoration: underline;
+    font-size: 18px;
   }
   .videotype {
     width: 100vw;
@@ -82,5 +92,29 @@
     grid-row: 1/2;
     position: relative;
     z-index: 1;
+  }
+  .video_mobile {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    .video {
+      /* display: none; */
+    }
+    .keywords {
+      display: none;
+    }
+    .view_video {
+      grid-column: 1/9;
+    }
+    .view_video a:last-of-type {
+      font-size: 16px;
+    }
+    /* .video_mobile {
+      display: block;
+      grid-column: 1/9;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 1;
+    } */
   }
 </style>
