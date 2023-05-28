@@ -1,0 +1,120 @@
+---
+---
+
+<section class="videosection">
+  <div class="keywords">
+    <h2>Hos NudiTea er..</h2>
+    <ul class="values">
+      <li><span>&ShortRightArrow;</span> Kvaliteten altid i fokus</li>
+      <li><span>&ShortRightArrow;</span> Alle produkter 100% plantebaserede</li>
+      <li><span>&ShortRightArrow;</span> Udvalget stort</li>
+      <li><span>&ShortRightArrow;</span> Der tid og plads til god betjening</li>
+    </ul>
+  </div>
+  <div class="view_video">
+    <a href="#" target="_blank">
+      <img src="../svgs/playbutton.svg" alt="playbutton" />
+    </a>
+    <a href="#" target="_blank"> Se den fulde video</a>
+  </div>
+  <div class="video">
+    <video autoplay loop muted class="videotype">
+      <source src="/videos/vid-cover-nuditea-comp3.webm" type="video/webm" />
+      <source src="/videos/vid-cover-nuditea-comp2.mp4" type="video/mp4" />
+      Your browser does not support the video tag. Try another browser.
+    </video>
+  </div>
+  <div class="video_mobile">
+    <video autoplay loop muted class="videotype">
+      <source src="/videos/vid-cover-nuditea-mobile-comp3.webm" type="video/webm" />
+      <source src="/videos/vid-cover-nuditea-mobile-comp2.mp4" type="video/mp4" />
+      Your browser does not support the video tag. Try another browser.
+    </video>
+  </div>
+</section>
+
+<style>
+  .videosection {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .keywords {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 2;
+    justify-self: center;
+  }
+  .keywords h2 {
+    color: var(--colour-text);
+    font-size: 40px;
+    margin-bottom: 2rem;
+  }
+  .values li {
+    font-size: 32px;
+    font-family: var(--font-main-light);
+    line-height: 60px;
+    list-style: none;
+  }
+  span {
+    color: var(--colour-gold);
+  }
+  .view_video {
+    grid-column: 6/8;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .view_video a:first-of-type {
+    margin-bottom: 2rem;
+  }
+  .view_video a:first-of-type img {
+    width: 110%;
+  }
+  .view_video a:last-of-type {
+    color: var(--colour-gold);
+    text-decoration: underline;
+    font-size: 18px;
+  }
+  .videotype {
+    width: 100vw;
+  }
+  .video {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 1;
+  }
+  .video_mobile {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    .video {
+      /* display: none; */
+    }
+    .keywords {
+      display: none;
+    }
+    .view_video {
+      grid-column: 1/9;
+    }
+    .view_video a:last-of-type {
+      font-size: 16px;
+    }
+    /* .video_mobile {
+      display: block;
+      grid-column: 1/9;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 1;
+    } */
+  }
+</style>
