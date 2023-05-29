@@ -4,6 +4,7 @@ import Burgermenu from "../components/Burgermenu.astro";
 import Footer from "../components/Footer.astro";
 import Scrollarrow from "../components/Scrollarrow.astro";
 import Normalbutton from "../components/Normalbutton.astro";
+import Instacarousel from "../components/Instacarousel.astro";
 import "../styles/burger.css";
 import "../styles/master.css";
 import "../styles/index.css";
@@ -76,8 +77,10 @@ import "../styles/index.css";
         <Normalbutton state="default">Se menu</Normalbutton>
       </div>
     </section>
+    <Instacarousel />
   </main>
   <Footer />
   <div><img src="../imgs/nightsky.webp" alt="background sky" class="background_image" /></div>
   <script src="../scripts/burger.js"></script>
+  <script src="../scripts/carousel.js"></script>
 </Mainlayout>
