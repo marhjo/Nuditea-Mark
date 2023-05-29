@@ -1,4 +1,177 @@
 ---
 ---
+<div class="c-body">
+<div class="wrapper">
+    <a class="nudi_link" href="https://www.instagram.com/nuditea.dk/"><p>@nuditea.dk</p></a>
+    <button id="left" class="carousel_btn carousel_btn--left is-hidden">
+      <img src="./svgs/arrow-left.svg" alt="arrow button left" />
+    </button>
+    <ul class="carousel">
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic1.webp"
+          draggable="false"
+          alt="insta pic 1 nuditea"
+        />
+      </li>
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic2.webp"
+          draggable="false"
+          alt="insta pic 2 nuditea"
+        />
+      </li>
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic3.webp"
+          draggable="false"
+          alt="insta pic 3 nuditea"
+        />
+      </li>
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic4.webp"
+          draggable="false"
+          alt="insta pic 4 nuditea"
+        />
+      </li>
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic5.webp"
+          draggable="false"
+          alt="insta pic 5 nuditea"
+        />
+      </li>
+      <li class="instapic">
+        <img
+          src="./imgs/insta-pic6.webp"
+          draggable="false"
+          alt="insta pic 6 nuditea"
+        />
+      </li>
+    </ul>
+    <button id="right" class="carousel_btn carousel_btn--right">
+      <img src="./svgs/arrow-right.svg" alt="arrow button right" />
+    </button>
+  </div>
+</div>
 
-<h1>heeeeejsa</h1>
+  <style>
+    .c-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .c-body a {
+      font-family: var(--font-title);
+      color: var(--colour-text);
+      text-align: center;
+      font-size: 1.875rem;
+      text-decoration: none;
+      transition: font-size 0.3s ease;
+}
+
+    .c-body a:hover {
+      font-size: 2rem;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .wrapper {
+      max-width: 68.75rem;
+      width: 100%;
+      position: relative;
+    }
+
+    .wrapper .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 2.75rem;
+       /* overflow: hidden; --- alt nedenfor er for at sørge for at få billederne til at centerer sig selv efter dragging*/
+      overflow-x: auto;
+      margin: 0 2.5rem 0 4rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: 0;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel .instapic {
+      cursor: pointer;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel.no-transition {
+      scroll-behavior: auto;
+    }
+
+    .wrapper.dragging {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+    }
+
+    .wrapper.dragging .instapic {
+      cursor: grab;
+      user-select: none;
+    }
+
+    .instapic img {
+      width: 18.75rem;
+      height: 18.75rem;
+      object-fit: cover;
+    }
+
+    .carousel_btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .wrapper button {
+      cursor: pointer;
+      position: absolute;
+      top: 55%;
+      transform: translateY(-5%);
+    }
+
+    .wrapper button:first-child {
+      left: -1.375rem;
+    }
+
+    .wrapper button:last-child {
+      right: -1.063rem;
+    }
+
+    /* ------- media quiriesssss ------ */
+    @media screen and (max-width: 900px) {
+      .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+        margin: 0 5.5rem;
+      }
+      
+      
+      .wrapper button:last-child {
+        right: 0px;
+    }
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper .carousel {
+        grid-auto-columns: 100%;
+        margin: 0 0 0 2.55rem;
+      }
+
+      .wrapper button:last-child {
+      right: -0.063rem;
+    }
+    }
+  </style>
