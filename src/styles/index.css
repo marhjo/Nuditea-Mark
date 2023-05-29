@@ -1,0 +1,148 @@
+/* ------Header------------*/
+.index_header {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("../imgs/forsidebilledeweb.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.index_header p {
+  font-family: var(--font-title);
+  color: var(--colour-gold);
+  align-self: start;
+  margin-top: 1rem;
+}
+.rightgold {
+  grid-column: 6/7;
+  grid-row: 1/2;
+  justify-self: end;
+  align-self: start;
+}
+.leftgold {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  justify-self: start;
+  align-self: end;
+}
+.nav-buttons {
+  grid-column: 3/7;
+  grid-row: 3/4;
+}
+
+.nav_container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+  align-self: start;
+  height: 32rem;
+  justify-items: center;
+}
+.nav_container h3 {
+  color: var(--colour-text);
+  grid-column: 3/7;
+  grid-row: 2/3;
+  width: 80%;
+  text-align: center;
+  align-self: center;
+}
+
+.nav_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  padding: 1.25rem;
+}
+.logo_container {
+  grid-column: 3/7;
+  grid-row: 1/2;
+  align-self: center;
+}
+.logo {
+  cursor: pointer;
+  margin-top: 1rem;
+  height: 10rem;
+}
+
+.nav-button {
+  display: inline-block;
+  margin: 0 0.625rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid var(--colour-gold);
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+  color: var(--colour-gold);
+}
+/* ------------------------------*/
+
+/* ------Åbningstider------------*/
+.closingtimes {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  grid-template-rows: 1fr auto;
+}
+
+.closingtimes h2 {
+  grid-column: 4/6;
+  margin-bottom: 1rem;
+}
+
+.day {
+  grid-column: 4/5;
+  margin-right: 1rem;
+}
+.time {
+  grid-column: 5/6;
+}
+/* ------------------------------*/
+
+@media (max-width: 770px) {
+  .index_header {
+    background-image: url("../imgs/forsidebilledemobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .logo {
+    margin-top: 1.5rem;
+  }
+  .nav_menu {
+    padding: 0;
+  }
+  .nav-buttons {
+    position: fixed;
+    left: -100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: var(--colour-red);
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    text-align: center;
+    transition: 0.3s;
+    padding-bottom: 20rem;
+  }
+
+  .nav-buttons.active {
+    left: 0;
+  }
+  .nav-button {
+    display: inline-block;
+    margin: 0 0.625rem;
+    padding: 1rem;
+    width: fit-content;
+    height: fit-content;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid var(--colour-gold);
+  }
+}
