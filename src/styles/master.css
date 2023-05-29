@@ -75,7 +75,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-title);
+  font-family: var(--font-title-bold);
   color: var(--colour-titletext);
   letter-spacing: 0.1rem;
   font-weight: lighter;

@@ -1,8 +1,9 @@
 ---
 import Mainlayout from "../components/Mainlayout.astro";
-import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
 import Footer from "../components/Footer.astro";
+import Scrollarrow from "../components/Scrollarrow.astro";
+import Normalbutton from "../components/Normalbutton.astro";
 import "../styles/burger.css";
 import "../styles/master.css";
 import "../styles/index.css";
@@ -43,6 +44,7 @@ import "../styles/index.css";
     <Burgermenu />
   </header>
   <main>
+    <Scrollarrow />
     <section class="closingtimes">
       <h2>Åbningstider</h2>
       <ul class="day">
@@ -64,7 +66,18 @@ import "../styles/index.css";
         <li>12-19</li>
       </ul>
     </section>
+    <section class="our_menu">
+      <img src="../imgs/forside_ourmenu.webp" alt="bubble tea" />
+      <div class="our_container">
+        <div class="rightgold"><img src="../svgs/gulddetaljerhøjre.svg" alt="guldramme" /></div>
+        <div class="leftgold"><img src="../svgs/gulddetaljervenstre.svg" alt="guldramme" /></div>
+        <h2>Vores menu</h2>
+        <p>Hos Nudi Tea går vi op i at vores produkter er af god kvalitet, sådan at vi kan sikre den bedst mulige smagsoplevelser for vores kunder. Vi tilbyder et bredt sortiment af smage, så der er noget for enhver.</p>
+        <Normalbutton state="default">Se menu</Normalbutton>
+      </div>
+    </section>
   </main>
   <Footer />
   <div><img src="../imgs/nightsky.webp" alt="background sky" class="background_image" /></div>
+  <script src="../scripts/burger.js"></script>
 </Mainlayout>
