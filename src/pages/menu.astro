@@ -2,13 +2,135 @@
 import Mainlayout from "../components/Mainlayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
+import Menusection from "../components/Menusection.astro";
 import Footer from "../components/Footer.astro";
+import Scrollarrow from "../components/Scrollarrow.astro";
 import "../styles/burger.css";
 import "../styles/master.css";
+import "../styles/index.css";
 ---
 
 <Mainlayout>
   <script src="../scripts/menusection.js"></script>
+
+  <header>
+    <Navbar />
+    <Burgermenu />
+  </header>
+  <main>
+    <Scrollarrow />
+    <section class="our_menu">
+      <img src="../imgs/menuside.jpg" alt="bubble tea" />
+      <div class="our_container">
+        <div class="rightgold">
+          <img src="../svgs/gulddetaljerhøjre.svg" alt="guldramme" />
+        </div>
+        <div class="leftgold">
+          <img src="../svgs/gulddetaljervenstre.svg" alt="guldramme" />
+        </div>
+        <h2>Priser</h2>
+        <h3>Lille 38 kr. / Stor 45 kr.</h3>
+        <p>
+          Vælg din egen kombination af enten frugt te eller mælke te, eller vælg
+          én af vores egne favoritter. Alle produkter er 100% plantebaseret og
+          laves med enten havremælk eller ærtemælk (glutenfri)
+        </p>
+        <h4 class="after">Ekstra bobler 5 kr</h4>
+        <h4 class="after2">Lille, 500 ml / Stor, 700 ml</h4>
+      </div>
+    </section>
+    <Menusection />
+  </main>
+  <footer>
+    <Footer />
+  </footer>
+  <div>
+    <img
+      src="../imgs/nightsky.webp"
+      alt="background sky"
+      class="background_image"
+    />
+  </div>
+  <script src="../scripts/burger.js"></script>
 </Mainlayout>
 
-<style></style>
+<style>
+  .our_container h2 {
+    grid-column: 2/7;
+    grid-row: 1/2;
+    align-self: center;
+  }
+  .our_container h3 {
+    grid-column: 2/7;
+    grid-row: 2/3;
+    align-self: center;
+    font-family: var(--font-title);
+    color: var(--colour-titletext);
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+    margin-bottom: 5%;
+  }
+
+  .our_container p {
+    grid-column: 2/7;
+    grid-row: 4/4;
+    width: 90%;
+    line-height: 30px;
+    font-family: var(--font-main-light);
+    font-size: 20px;
+    margin-bottom: 5%;
+  }
+
+  .after {
+    grid-column: 2/7;
+    grid-row: 5/5;
+    align-self: center;
+    font-family: var(--font-title);
+    color: var(--colour-titletext);
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+    font-size: larger;
+  }
+
+  .after2 {
+    grid-column: 2/7;
+    grid-row: 6/6;
+    align-self: center;
+    font-family: var(--font-title);
+    color: var(--colour-titletext);
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+    font-size: larger;
+  }
+
+  .our_container .leftgold {
+    grid-column: 2/3;
+    grid-row: 6/6;
+    justify-self: start;
+    align-self: end;
+  }
+
+  @media (max-width: 1000px) {
+    .our_container h2 {
+      grid-column: 3/7;
+      grid-row: 1/2;
+      align-self: center;
+      margin-top: 3rem;
+      width: 15rem;
+    }
+    .our_container h3 {
+      grid-column: 3/7;
+      grid-row: 2/2;
+      align-self: center;
+      margin-top: 3rem;
+      width: 15rem;
+    }
+
+    .our_container .leftgold {
+      grid-column: 2/3;
+      grid-row: 7/7;
+      justify-self: start;
+      align-self: end;
+    }
+  }
+</style>
