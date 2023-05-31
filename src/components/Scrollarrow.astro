@@ -31,6 +31,7 @@
     transition-property: transform;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
+    z-index: 999;
   }
 
   #scroll-to-top:hover,
@@ -49,7 +50,10 @@
 
   if (scrollToTop && scrollToBottom) {
     window.onscroll = function () {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
         scrollToTop.style.display = "block";
         scrollToBottom.style.display = "none";
       } else {
