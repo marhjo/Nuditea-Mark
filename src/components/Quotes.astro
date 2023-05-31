@@ -2,19 +2,12 @@
 import QCarousel from "./QCarousel";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  "https://inqvvzokryctgfbwsdrl.supabase.co",
-  import.meta.env.SUPABASE_KEY
-);
+const supabase = createClient("https://inqvvzokryctgfbwsdrl.supabase.co", import.meta.env.SUPABASE_KEY);
 
 const { data } = await supabase.from("anmeldelser").select("*");
 ---
 
-{
-  data && (
-    <QCarousel client:load items={data as any} interval={5000} margin={1.15} />
-  )
-}
+{data && <QCarousel client:load items={data as any} interval={5000} margin={1.15} />}
 
 <style is:global lang="scss">
   #q-carousel {
@@ -56,6 +49,11 @@ const { data } = await supabase.from("anmeldelser").select("*");
           align-self: center;
         }
       }
+    }
+  }
+  @media (max-width: 770px) {
+    #q-carousel {
+      padding: 0 1rem;
     }
   }
 </style>

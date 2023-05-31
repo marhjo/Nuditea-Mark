@@ -45,15 +45,11 @@
 
 <script>
   const scrollToTop = document.querySelector<HTMLElement>("#scroll-to-top");
-  const scrollToBottom =
-    document.querySelector<HTMLElement>("#scroll-to-bottom");
+  const scrollToBottom = document.querySelector<HTMLElement>("#scroll-to-bottom");
 
   if (scrollToTop && scrollToBottom) {
     window.onscroll = function () {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollToTop.style.display = "block";
         scrollToBottom.style.display = "none";
       } else {
@@ -81,4 +77,4 @@
     scrollToTop.addEventListener("click", scrollToTopFunction);
     scrollToBottom.addEventListener("click", scrollToBottomFunction);
   }
-</script>}
+</script>
