@@ -1,6 +1,7 @@
 window.addEventListener("load", windowLoad);
 
 function windowLoad() {
+  console.log("Forbindelse til carousel.js");
   const wrapper = document.querySelector(".wrapper");
   const carousel = document.querySelector(".carousel");
   const arrowBtns = document.querySelectorAll(".wrapper button");
