@@ -28,9 +28,9 @@ carouselChildrens.slice(0, cardPerView).forEach((card) => {
 // tilføj eventlisteners for at få arrow-knapperne til at scrolle højre og venstre.
 arrowBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    //   console.log(btn.id); -- tjekker at knapperne virker i console
-    carousel.scrollLeft +=
-      btn.id === "left" ? -firstInstaWidth : firstInstaWidth;
+    console.log(btn.id);
+    //  -- tjekker at knapperne virker i console
+    carousel.scrollLeft += btn.id === "left" ? -firstInstaWidth : firstInstaWidth;
     //
   });
 });
@@ -74,10 +74,7 @@ const infiniteScroll = () => {
     carousel.classList.remove("no-transition");
   }
   // ---- hvis karrusellen er ved slutte => scroll til starten
-  else if (
-    Math.ceil(carousel.scrollLeft) ===
-    carousel.scrollWidth - carousel.offsetWidth
-  ) {
+  else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
     //   console.log("You've reached to the right end");
     carousel.classList.add("no-transition");
     carousel.scrollLeft = carousel.offsetWidth;
