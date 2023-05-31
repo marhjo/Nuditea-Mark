@@ -14,11 +14,7 @@ export type Props = {
   margin?: number;
 };
 
-export default function QCarousel({
-  items,
-  interval = 3000,
-  margin = 1.1,
-}: Props) {
+export default function QCarousel({ items, interval = 3000, margin = 1.1 }: Props) {
   const [currentItem, setCurrentItem] = useState(0);
   const [lastItem, setLastItem] = useState(-1);
 
@@ -60,7 +56,7 @@ export default function QCarousel({
               <img
                 className="stars"
                 alt={item.stars}
-                src={`/imgs/placeholder.jpg`}
+                src={`../svgs/${item.stars}`}
                 // src={`/imgs/${item.stars}`}
               />
             </div>

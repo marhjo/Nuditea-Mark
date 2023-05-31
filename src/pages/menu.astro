@@ -7,7 +7,7 @@ import Footer from "../components/Footer.astro";
 import Scrollarrow from "../components/Scrollarrow.astro";
 import "../styles/burger.css";
 import "../styles/master.css";
-import "../styles/index.css";
+import "../styles/menu.css";
 ---
 
 <Mainlayout title="NudiTea - Menu">
@@ -31,26 +31,16 @@ import "../styles/index.css";
         </div>
         <h2>Priser</h2>
         <h3>Lille 38 kr. / Stor 45 kr.</h3>
-        <p>
-          Vælg din egen kombination af enten frugt te eller mælke te, eller vælg
-          én af vores egne favoritter. Alle produkter er 100% plantebaseret og
-          laves med enten havremælk eller ærtemælk (glutenfri)
-        </p>
+        <p>Vælg din egen kombination af enten frugt te eller mælke te, eller vælg én af vores egne favoritter. Alle produkter er 100% plantebaseret og laves med enten havremælk eller ærtemælk (glutenfri)</p>
         <h4 class="after">Ekstra bobler 5 kr</h4>
         <h4 class="after2">Lille, 500 ml / Stor, 700 ml</h4>
       </div>
     </section>
     <Menusection />
   </main>
-  <footer>
-    <Footer />
-  </footer>
+  <Footer />
   <div>
-    <img
-      src="../imgs/nightsky.webp"
-      alt="background sky"
-      class="background_image"
-    />
+    <img src="../imgs/nightsky.webp" alt="background sky" class="background_image" />
   </div>
   <script src="../scripts/burger.js"></script>
 </Mainlayout>
