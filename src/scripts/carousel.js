@@ -1,4 +1,4 @@
-window.addEventListener(load, windowLoad);
+window.addEventListener("load", windowLoad);
 
 function windowLoad() {
   const wrapper = document.querySelector(".wrapper");
