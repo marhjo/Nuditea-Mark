@@ -6,7 +6,6 @@
 </div>
 
 <div id="scroll-to-bottom">
-  <!-- <p class="text">Kontakt</p> -->
   <span>&ShortDownArrow;</span>
 </div>
 
@@ -46,7 +45,8 @@
 
 <script>
   const scrollToTop = document.querySelector<HTMLElement>("#scroll-to-top");
-  const scrollToBottom = document.querySelector<HTMLElement>("#scroll-to-bottom");
+  const scrollToBottom =
+    document.querySelector<HTMLElement>("#scroll-to-bottom");
 
   if (scrollToTop && scrollToBottom) {
     window.onscroll = function () {
@@ -81,4 +81,4 @@
     scrollToTop.addEventListener("click", scrollToTopFunction);
     scrollToBottom.addEventListener("click", scrollToBottomFunction);
   }
-</script>
+</script>}
