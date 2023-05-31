@@ -42,7 +42,7 @@
   width: 90%;
   line-height: 30px;
   font-family: var(--font-main-light);
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 5%;
   justify-self: center;
 }
@@ -123,12 +123,10 @@
     justify-self: center;
     margin-top: 3rem;
     font-size: 24px;
-    /* width: 15rem; */
   }
 
   .our_container p {
     font-size: 16px;
-    width: 15rem;
   }
   .logo {
     height: 5rem;
