@@ -32,8 +32,8 @@ function windowLoad() {
   // tilføj eventlisteners for at få arrow-knapperne til at scrolle højre og venstre.
   arrowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log(btn.id);
       //  -- tjekker at knapperne virker i console
+      console.log(btn.id);
       carousel.scrollLeft += btn.id === "left" ? -firstInstaWidth : firstInstaWidth;
       //
     });
