@@ -1,28 +1,32 @@
-const burgermenu = document.querySelector(".burger");
-const navMenu = document.querySelector(".nav-buttons");
-const mainElement = document.querySelector("main");
+window.addEventListener("load", windowLoad);
 
-burgermenu.addEventListener("click", () => {
-  console.log("hej1");
-  burgermenu.classList.toggle("active");
-  navMenu.classList.toggle("active");
+function windowLoad() {
+  const burgermenu = document.querySelector(".burger");
+  const navMenu = document.querySelector(".nav-buttons");
+  const mainElement = document.querySelector("main");
 
-  if (mainElement.classList.contains("hide2")) {
-    // Fjerner hide2 med 50 ms delay
-    setTimeout(() => {
-      mainElement.classList.toggle("hide2");
-    }, 50);
-  } else {
-    // Tilføjer hide2 med 130ms delay
-    setTimeout(() => {
-      mainElement.classList.toggle("hide2");
-    }, 130);
-  }
-});
+  burgermenu.addEventListener("click", () => {
+    console.log("hej1");
+    burgermenu.classList.toggle("active");
+    navMenu.classList.toggle("active");
 
-document.querySelectorAll(".nav-button").forEach((n) =>
-  n.addEventListener("click", () => {
-    burgermenu.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
+    if (mainElement.classList.contains("hide2")) {
+      // Fjerner hide2 med 50 ms delay
+      setTimeout(() => {
+        mainElement.classList.toggle("hide2");
+      }, 50);
+    } else {
+      // Tilføjer hide2 med 130ms delay
+      setTimeout(() => {
+        mainElement.classList.toggle("hide2");
+      }, 130);
+    }
+  });
+
+  document.querySelectorAll(".nav-button").forEach((n) =>
+    n.addEventListener("click", () => {
+      burgermenu.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+}
