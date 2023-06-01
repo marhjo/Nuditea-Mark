@@ -254,6 +254,7 @@ main {
     z-index: 1;
     text-align: center;
     transition: 0.3s;
+    margin-top: 0;
     padding-bottom: 20rem;
     padding-top: 5rem;
   }
