@@ -1,0 +1,4 @@
+- [ ] Improve Footer
+- [ ] Improve Fav Cards
+- [ ] Fix Background Image / Frame Image in Menu
+-

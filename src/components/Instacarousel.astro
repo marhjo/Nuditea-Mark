@@ -1,34 +1,47 @@
 ---
+import { Image } from "astro:assets";
+
+import Pic1 from "../assets/imgs/insta-pic1.webp";
+import Pic2 from "../assets/imgs/insta-pic2.webp";
+import Pic3 from "../assets/imgs/insta-pic3.webp";
+import Pic4 from "../assets/imgs/insta-pic4.webp";
+import Pic5 from "../assets/imgs/insta-pic5.webp";
+import Pic6 from "../assets/imgs/insta-pic6.webp";
+
+import ArrowLeft from "../assets/svgs/arrow-left.svg";
+import ArrowRight from "../assets/svgs/arrow-right.svg";
 ---
 
 <div class="c-body">
   <div class="wrapper">
-    <a class="nudi_link" href="https://www.instagram.com/nuditea.dk/"><p>@nuditea.dk</p></a>
+    <a class="nudi_link" href="https://www.instagram.com/nuditea.dk/"
+      ><p>@nuditea.dk</p></a
+    >
     <button id="left" class="carousel_btn carousel_btn--left is-hidden">
-      <img src="./svgs/arrow-left.svg" alt="arrow button left" />
+      <img src={ArrowLeft.src} alt="arrow button left" />
     </button>
     <ul class="carousel">
       <li class="instapic">
-        <img src="./imgs/insta-pic1.webp" draggable="false" alt="insta pic 1 nuditea" />
+        <Image src={Pic1} draggable="false" alt="insta pic 1 nuditea" />
       </li>
       <li class="instapic">
-        <img src="./imgs/insta-pic2.webp" draggable="false" alt="insta pic 2 nuditea" />
+        <Image src={Pic2} draggable="false" alt="insta pic 2 nuditea" />
       </li>
       <li class="instapic">
-        <img src="./imgs/insta-pic3.webp" draggable="false" alt="insta pic 3 nuditea" />
+        <Image src={Pic3} draggable="false" alt="insta pic 3 nuditea" />
       </li>
       <li class="instapic">
-        <img src="./imgs/insta-pic4.webp" draggable="false" alt="insta pic 4 nuditea" />
+        <Image src={Pic4} draggable="false" alt="insta pic 4 nuditea" />
       </li>
       <li class="instapic">
-        <img src="./imgs/insta-pic5.webp" draggable="false" alt="insta pic 5 nuditea" />
+        <Image src={Pic5} draggable="false" alt="insta pic 5 nuditea" />
       </li>
       <li class="instapic">
-        <img src="./imgs/insta-pic6.webp" draggable="false" alt="insta pic 6 nuditea" />
+        <Image src={Pic6} draggable="false" alt="insta pic 6 nuditea" />
       </li>
     </ul>
     <button id="right" class="carousel_btn carousel_btn--right">
-      <img src="./svgs/arrow-right.svg" alt="arrow button right" />
+      <img src={ArrowRight.src} alt="arrow button right" />
     </button>
   </div>
 </div>
@@ -127,7 +140,7 @@
     right: -1.063rem;
   }
 
-  /* ------- media quiriesssss ------ */
+  /* media quiriesssss */
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);

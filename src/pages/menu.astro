@@ -1,10 +1,19 @@
 ---
+import { Image } from "astro:assets";
+
 import Mainlayout from "../components/Mainlayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
 import Menusection from "../components/Menusection.astro";
 import Footer from "../components/Footer.astro";
 import Scrollarrow from "../components/Scrollarrow.astro";
+
+import GoldDetailRight from "../assets/svgs/gulddetaljerhøjre.svg";
+import GoldDetailLeft from "../assets/svgs/gulddetaljervenstre.svg";
+
+import Nightsky from "../assets/imgs/nightsky.webp";
+import Menuside from "../assets/imgs/menuside.jpg";
+
 import "../styles/burger.css";
 import "../styles/master.css";
 import "../styles/menu.css";
@@ -21,17 +30,21 @@ import "../styles/menu.css";
   <main>
     <Scrollarrow />
     <section class="our_menu">
-      <img src="../imgs/menuside.jpg" alt="bubble tea" />
+      <Image src={Menuside} alt="bubble tea" />
       <div class="our_container">
         <div class="rightgold">
-          <img src="../svgs/gulddetaljerhøjre.svg" alt="guldramme" />
+          <img src={GoldDetailRight.src} alt="guldramme" />
         </div>
         <div class="leftgold">
-          <img src="../svgs/gulddetaljervenstre.svg" alt="guldramme" />
+          <img src={GoldDetailLeft.src} alt="guldramme" />
         </div>
         <h2>Priser</h2>
         <h3>Lille 38 kr. / Stor 45 kr.</h3>
-        <p>Vælg din egen kombination af enten frugt te eller mælke te, eller vælg én af vores egne favoritter. Alle produkter er 100% plantebaseret og laves med enten havremælk eller ærtemælk (glutenfri)</p>
+        <p>
+          Vælg din egen kombination af enten frugt te eller mælke te, eller vælg
+          én af vores egne favoritter. Alle produkter er 100% plantebaseret og
+          laves med enten havremælk eller ærtemælk (glutenfri)
+        </p>
         <h4 class="after">Ekstra bobler 5 kr</h4>
         <h4 class="after2">Lille, 500 ml / Stor, 700 ml</h4>
       </div>
@@ -40,7 +53,7 @@ import "../styles/menu.css";
   </main>
   <Footer />
   <div>
-    <img src="../imgs/nightsky.webp" alt="background sky" class="background_image" />
+    <Image src={Nightsky} alt="background sky" class="background_image" />
   </div>
   <script src="../scripts/burger.js"></script>
   <script src="../scripts/menusection.js"></script>

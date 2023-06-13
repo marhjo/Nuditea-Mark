@@ -8,6 +8,8 @@
 }
 .our_menu img {
   grid-column: 1/2;
+  display: block;
+  height: auto;
   width: 100%;
   align-self: center;
 }
@@ -64,6 +66,8 @@
 }
 .our_menu2 img {
   grid-column: 2/3;
+  display: block;
+  height: auto;
   width: 100%;
   align-self: center;
 }

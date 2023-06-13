@@ -1,4 +1,10 @@
 ---
+import Hand from "../assets/svgs/hand.svg";
+import Crystal from "../assets/svgs/crystal.svg";
+
+import SmallFrame from "../assets/imgs/frame_small.jpg";
+import { getImage } from "astro:assets";
+const optimizedBackground = await getImage({ src: SmallFrame });
 ---
 
 <div class="frame_container">
@@ -14,18 +20,19 @@
       <li>Chai Latte 40 kr.</li>
       <li>Kakao 40 / 60 kr.</li>
     </ul>
-    <img src="/svgs/hand.svg" alt="" id="handsvg" />
-    <img src="/svgs/crystal.svg" alt="" id="crystalsvg" />
+    <img src={Hand.src} alt="hand" id="handsvg" />
+    <img src={Crystal.src} alt="crystal" id="crystalsvg" />
   </div>
 </div>
 
-<style>
+<style define:vars={{ bgimg: `url(${optimizedBackground.src})` }}>
   .frame_container {
     width: 100%;
     display: grid;
   }
+
   .small {
-    background-image: url("../imgs/frame_small.jpg");
+    background-image: var(--bgimg);
     background-repeat: no-repeat;
     height: 810px;
     width: 743px;

@@ -1,4 +1,5 @@
 ---
+import PlayButton from "../assets/svgs/playbutton.svg";
 ---
 
 <section class="videosection">
@@ -13,9 +14,11 @@
   </div>
   <div class="view_video">
     <a href="https://www.youtube.com/watch?v=ZNOVu_BMvG4" target="_blank">
-      <img src="../svgs/playbutton.svg" alt="playbutton" />
+      <img src={PlayButton.src} alt="playbutton" />
     </a>
-    <a href="https://www.youtube.com/watch?v=ZNOVu_BMvG4" target="_blank"> Se den fulde video</a>
+    <a href="https://www.youtube.com/watch?v=ZNOVu_BMvG4" target="_blank">
+      Se den fulde video</a
+    >
   </div>
   <div class="video">
     <video autoplay loop muted class="videotype">
@@ -26,8 +29,14 @@
   </div>
   <div class="video_mobile">
     <video autoplay loop muted class="videotype">
-      <source src="/videos/vid-cover-nuditea-mobile-comp3.webm" type="video/webm" />
-      <source src="/videos/vid-cover-nuditea-mobile-comp2.mp4" type="video/mp4" />
+      <source
+        src="/videos/vid-cover-nuditea-mobile-comp3.webm"
+        type="video/webm"
+      />
+      <source
+        src="/videos/vid-cover-nuditea-mobile-comp2.mp4"
+        type="video/mp4"
+      />
       Your browser does not support the video tag. Try another browser.
     </video>
   </div>
@@ -61,9 +70,11 @@
     line-height: 60px;
     list-style: none;
   }
+
   span {
     color: var(--colour-gold);
   }
+
   .view_video {
     grid-column: 6/8;
     grid-row: 1/2;

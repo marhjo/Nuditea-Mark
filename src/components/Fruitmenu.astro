@@ -1,4 +1,10 @@
 ---
+import Hand from "../assets/svgs/hand.svg";
+import Crystal from "../assets/svgs/crystal.svg";
+
+import BigFrame from "../assets/imgs/frame_big.jpg";
+import { getImage } from "astro:assets";
+const optimizedBackground = await getImage({ src: BigFrame });
 ---
 
 <div class="frame_container">
@@ -52,12 +58,12 @@
       <p>Hasselnød / Karamel / Vanilje</p>
       <p>Kan serveres kold eller varm</p>
     </div>
-    <img src="/svgs/hand.svg" alt="" id="handsvg" />
-    <img src="/svgs/crystal.svg" alt="" id="crystalsvg" />
+    <img src={Hand.src} alt="hand" id="handsvg" />
+    <img src={Crystal.src} alt="crystal" id="crystalsvg" />
   </div>
 </div>
 
-<style>
+<style define:vars={{ bgimg: `url(${optimizedBackground.src})` }}>
   h2 {
     grid-column: 2/3;
     justify-self: start;
@@ -77,7 +83,7 @@
     display: grid;
   }
   .big {
-    background-image: url("../imgs/frame_big.jpg");
+    background-image: var(--bgimg);
     background-repeat: no-repeat;
     height: 1155px;
     width: 743px;

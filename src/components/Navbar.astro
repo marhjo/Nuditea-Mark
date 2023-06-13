@@ -1,9 +1,10 @@
 ---
+import Logo from "../assets/svgs/nuditealogo.svg";
 ---
 
 <div class="nav_menu">
   <a href="/">
-    <img src="../svgs/nuditealogo.svg" alt="Logo" class="logo" />
+    <img src={Logo.src} alt="Logo" class="logo" />
   </a>
   <div class="nav-buttons">
     <a href="/" class="nav-button">Forside</a>
@@ -25,6 +26,7 @@
     margin-bottom: 1.25rem;
     cursor: pointer;
     width: 20rem;
+    height: auto;
   }
 
   .nav-button {

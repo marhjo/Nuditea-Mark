@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import Mainlayout from "../components/Mainlayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Burgermenu from "../components/Burgermenu.astro";
@@ -6,6 +8,13 @@ import Footer from "../components/Footer.astro";
 import Scrollarrow from "../components/Scrollarrow.astro";
 import Quotes from "../components/Quotes.astro";
 import Videosection from "../components/Videosection.astro";
+
+import GoldDetailRight from "../assets/svgs/gulddetaljerhøjre.svg";
+import GoldDetailLeft from "../assets/svgs/gulddetaljervenstre.svg";
+
+import AboutDrink from "../assets/imgs/about_drink.png";
+import AboutLocation from "../assets/imgs/about_location.png";
+import Nightsky from "../assets/imgs/nightsky.webp";
 
 import "../styles/burger.css";
 import "../styles/master.css";
@@ -24,32 +33,39 @@ import "../styles/about.css";
     <section class="our_menu2">
       <div class="our_container2">
         <div class="rightgold">
-          <img src="../svgs/gulddetaljerhøjre.svg" alt="guldramme" />
+          <img src={GoldDetailRight.src} alt="guldramme" />
         </div>
         <div class="leftgold">
-          <img src="../svgs/gulddetaljervenstre.svg" alt="guldramme" />
+          <img src={GoldDetailLeft.src} alt="guldramme" />
         </div>
         <h2>Om os</h2>
         <p>
-          NudiTea åbnede i 2021 og startede med det ønske at åbne et bubble tea hus, hvor kvaliteten altid var i top. Vi har stort fokus på gode råvarer og betjening, og hos os er der plads til hygge og samvær for alle. Vores sted er 100%
-          plantebaseret og vi vil gerne åbne folks øjne for at de plantebaserede alternativer kan være mindst ligeså lækre, hvis ikke endnu bedre end det de andre tilbyder.
+          NudiTea åbnede i 2021 og startede med det ønske at åbne et bubble tea
+          hus, hvor kvaliteten altid var i top. Vi har stort fokus på gode
+          råvarer og betjening, og hos os er der plads til hygge og samvær for
+          alle. Vores sted er 100% plantebaseret og vi vil gerne åbne folks øjne
+          for at de plantebaserede alternativer kan være mindst ligeså lækre,
+          hvis ikke endnu bedre end det de andre tilbyder.
         </p>
       </div>
-      <img src="../imgs/about_drink.png" alt="bubble tea" />
+      <Image src={AboutDrink} alt="bubble tea" />
     </section>
     <section class="our_menu">
-      <img src="../imgs/about_location.png" alt="bubble tea" />
+      <Image src={AboutLocation} alt="bubble tea" />
       <div class="our_container">
         <div class="rightgold">
-          <img src="../svgs/gulddetaljerhøjre.svg" alt="guldramme" />
+          <img src={GoldDetailRight.src} alt="guldramme" />
         </div>
         <div class="leftgold">
-          <img src="../svgs/gulddetaljervenstre.svg" alt="guldramme" />
+          <img src={GoldDetailLeft.src} alt="guldramme" />
         </div>
         <h2>📌 Søborg Torv</h2>
         <p>
-          Vores butik ligger på Søborg Torv, hvor der er flere transportmuligheder i nærheden. Bus 6A og bus 160 kører lige ved siden af og Kildebakke st. er 1 km gåafstand væk. Torvet lægger op til hyggeligt samvær når vejret er godt og derfor har
-          vi også en mulighed for at nyde sin bubble tea udenfor. Se vores åbningstider her
+          Vores butik ligger på Søborg Torv, hvor der er flere
+          transportmuligheder i nærheden. Bus 6A og bus 160 kører lige ved siden
+          af og Kildebakke st. er 1 km gåafstand væk. Torvet lægger op til
+          hyggeligt samvær når vejret er godt og derfor har vi også en mulighed
+          for at nyde sin bubble tea udenfor. Se vores åbningstider her
         </p>
       </div>
     </section>
@@ -62,7 +78,7 @@ import "../styles/about.css";
       <Videosection />
     </section>
     <div>
-      <img src="../imgs/nightsky.webp" alt="background sky" class="background_image" />
+      <Image src={Nightsky} alt="background sky" class="background_image" />
     </div>
     <script src="../scripts/burger.js"></script>
   </main>
