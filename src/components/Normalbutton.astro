@@ -8,6 +8,13 @@ const { state, link, id } = Astro.props;
 </button>
 
 <style>
+  button {
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+  }
+
   a {
     text-decoration: none;
     font-family: var(--font-title);
@@ -17,6 +24,7 @@ const { state, link, id } = Astro.props;
     height: 100%;
     width: 100%;
   }
+
   .default {
     width: 10rem;
     border-style: solid;
@@ -31,13 +39,16 @@ const { state, link, id } = Astro.props;
     font-size: 20px;
     margin: 1rem;
   }
+
   .default:hover {
     background-color: #d9960a;
     border-color: #d9960a;
   }
+
   .default:hover a {
     color: var(--colour-text);
   }
+
   .active {
     width: 10rem;
     border-style: solid;
@@ -52,6 +63,7 @@ const { state, link, id } = Astro.props;
     font-size: 20px;
     margin: 1rem;
   }
+
   .active a {
     color: var(--colour-text);
   }

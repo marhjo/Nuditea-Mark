@@ -5,39 +5,31 @@ import BubbleTea1 from "../assets/imgs/bubble_tea1.png";
 import BubbleTea2 from "../assets/imgs/bubble_tea2.png";
 import BubbleTea3 from "../assets/imgs/bubble_tea3.png";
 import BubbleTea4 from "../assets/imgs/bubble_tea4.png";
+
+const images = [BubbleTea1, BubbleTea2, BubbleTea3, BubbleTea4];
+
+const items = [
+  { image: 0, title: "Skumbanan" },
+  { image: 1, title: "Watermelon Sugar High" },
+  { image: 2, title: "Grapefruit Greatfruit" },
+  { image: 3, title: "Marcipangris" },
+  { image: 0, title: "Æblerov" },
+  { image: 1, title: "Bær Med Bær" },
+  { image: 2, title: "Bounty" },
+];
 ---
 
 <!--- ui card starter -->
 <section class="container">
   <div class="fav_card">
-    <div class="img">
-      <Image src={BubbleTea1} alt="bubble tea 1" />
-      <h3>Skumbanan</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea2} alt="bubble tea 2" />
-      <h3>Watermelon Sugar High</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea3} alt="bubble tea 3" />
-      <h3>Grapefruit Greatfruit</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea4} alt="bubble tea 4" />
-      <h3>Marcipangris</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea1} alt="bubble tea 1" />
-      <h3>Æblerov</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea2} alt="bubble tea 2" />
-      <h3>Bær Med Bær</h3>
-    </div>
-    <div class="img">
-      <Image src={BubbleTea3} alt="bubble tea 3" />
-      <h3>Bounty</h3>
-    </div>
+    {
+      items.map(({ image, title }) => (
+        <div class="img">
+          <Image src={images[image]} alt={`bubble tea ${image}`} />
+          <h3>{title}</h3>
+        </div>
+      ))
+    }
   </div>
 </section>
 
@@ -45,60 +37,34 @@ import BubbleTea4 from "../assets/imgs/bubble_tea4.png";
 
 <!-- Styles starter -->
 
-<style>
-  .container .fav_card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.5rem;
-    justify-content: center;
-    text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
+<style lang="scss">
+  .container {
+    .fav_card {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .img {
+      transition-property: transform;
+      transition-duration: 150ms;
+      transition-timing-function: ease-in-out;
+      transform: scale(1) translateY(0);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 
   h3 {
     font-family: var(--font-main);
     color: var(--colour-titletext);
     font-size: medium;
-  }
-
-  @media (max-width: 930px) {
-    .container .fav_card {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: center;
-      text-align: center;
-    }
-    h3 {
-      font-family: var(--font-main);
-      color: var(--colour-titletext);
-    }
-  }
-
-  @media (max-width: 750px) {
-    .container .fav_card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-content: center;
-      text-align: center;
-    }
-    h3 {
-      font-family: var(--font-main);
-      color: var(--colour-titletext);
-    }
-  }
-
-  @media (max-width: 450px) {
-    .container .fav_card {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-content: center;
-      text-align: center;
-    }
-    h3 {
-      font-family: var(--font-main);
-      color: var(--colour-titletext);
-    }
   }
 </style>
 
