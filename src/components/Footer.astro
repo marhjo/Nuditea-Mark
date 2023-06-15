@@ -9,7 +9,9 @@ const { variant, link, leadto } = Astro.props;
       <p class="kontakt">Kontakt os:</p>
       <p>NudiTea ApS</p>
       <a href="tel:+4531423701">31 42 37 01</a><br />
-      <a href="https://www.google.com/maps/place/S%C3%B8borg+Torv+7,+2860+S%C3%B8borg/@55.7363758,12.5057778,17z/data=!3m1!4b1!4m6!3m5!1s0x465251f9a70d85cb:0xeda748a17a70b140!8m2!3d55.7363728!4d12.5083581!16s%2Fg%2F11csclgmkz">
+      <a
+        href="https://www.google.com/maps/place/S%C3%B8borg+Torv+7,+2860+S%C3%B8borg/@55.7363758,12.5057778,17z/data=!3m1!4b1!4m6!3m5!1s0x465251f9a70d85cb:0xeda748a17a70b140!8m2!3d55.7363728!4d12.5083581!16s%2Fg%2F11csclgmkz"
+      >
         Søborg Torv 7, 2860 Søborg</a
       >
       <p>CVR: 41934301</p>
@@ -17,15 +19,40 @@ const { variant, link, leadto } = Astro.props;
     <p class="copyright">Dette er et eksamensprojekt</p>
     <div class="allicons">
       <div class="firstrow">
-        <Icons icon="facebook" link="" leadto="_blank" />
+        <Icons icon="facebook" aria-label="Facebook" link="" leadto="_blank" />
 
-        <Icons icon="instagram" link="https://www.instagram.com/nuditea.dk/?hl=en" leadto="_blank" />
-        <Icons icon="trustpilot" link="https://dk.trustpilot.com/review/nuditea.dk" leadto="_blank" />
+        <Icons
+          icon="instagram"
+          aria-label="Instagram"
+          link="https://www.instagram.com/nuditea.dk/?hl=en"
+          leadto="_blank"
+        />
+        <Icons
+          icon="trustpilot"
+          aria-label="Trustpilot"
+          link="https://dk.trustpilot.com/review/nuditea.dk"
+          leadto="_blank"
+        />
       </div>
       <div class="secondrow">
-        <Icons icon="justeat" link="https://wolt.com/en/dnk/lyngby-gentofte/restaurant/nuditea" leadto="_blank" />
-        <Icons icon="wolt" link="https://www.just-eat.dk/en/menu/nuditea" leadto="_blank" />
-        <Icons icon="foodora" link="https://www.foodora.dk/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEGV1Rv0FQJiU0UCoy-LDv1m0K6IUqlm108m30_Ii0_lH-3mPVPbP-hoCpFwQAvD_BwE" leadto="_blank" />
+        <Icons
+          icon="justeat"
+          aria-label="Just Eat"
+          link="https://wolt.com/en/dnk/lyngby-gentofte/restaurant/nuditea"
+          leadto="_blank"
+        />
+        <Icons
+          icon="wolt"
+          aria-label="Wolt"
+          link="https://www.just-eat.dk/en/menu/nuditea"
+          leadto="_blank"
+        />
+        <Icons
+          icon="foodora"
+          aria-label="Foodora"
+          link="https://www.foodora.dk/?gclid=CjwKCAjw67ajBhAVEiwA2g_jEGV1Rv0FQJiU0UCoy-LDv1m0K6IUqlm108m30_Ii0_lH-3mPVPbP-hoCpFwQAvD_BwE"
+          leadto="_blank"
+        />
       </div>
     </div>
   </section>
