@@ -14,10 +14,16 @@ import ArrowRight from "../assets/svgs/arrow-right.svg";
 
 <div class="c-body">
   <div class="wrapper">
-    <a class="nudi_link" href="https://www.instagram.com/nuditea.dk/"
-      ><p>@nuditea.dk</p></a
+    <a
+      class="nudi_link"
+      aria-label="Nuditea Instagram"
+      href="https://www.instagram.com/nuditea.dk/"><p>@nuditea.dk</p></a
     >
-    <button id="left" class="carousel_btn carousel_btn--left is-hidden">
+    <button
+      id="left"
+      aria-label="Left Button"
+      class="carousel_btn carousel_btn--left is-hidden"
+    >
       <img src={ArrowLeft.src} alt="arrow button left" />
     </button>
     <ul class="carousel">
@@ -40,7 +46,11 @@ import ArrowRight from "../assets/svgs/arrow-right.svg";
         <Image src={Pic6} draggable="false" alt="insta pic 6 nuditea" />
       </li>
     </ul>
-    <button id="right" class="carousel_btn carousel_btn--right">
+    <button
+      id="right"
+      aria-label="Right Button"
+      class="carousel_btn carousel_btn--right"
+    >
       <img src={ArrowRight.src} alt="arrow button right" />
     </button>
   </div>

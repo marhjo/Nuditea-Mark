@@ -4,7 +4,7 @@ const { state, link, id } = Astro.props;
 
 <!-- Vælg mellem default eller active state --><!-- Indsæt evt. link, hvis knappen fører et sted hen -->
 <button class={state} id={id}>
-  <a href={link}><slot /></a>
+  <a href={link} aria-label="Page Button"><slot /></a>
 </button>
 
 <style>
