@@ -26,7 +26,7 @@ Nuditea, a small Bobbatea store, needed a new webpage to enhance their online pr
 Special thanks to my team members for their collaboration on this project:
 - [Siff](https://github.com/SiffKL)
 - [Kaowsoy](https://github.com/kaowsoy)
-- [Amal1a](https://github.com/Amal1a)
+- [Amalia](https://github.com/Amal1a)
 - [Freja](https://github.com/FrejaFischer)
 
 Myself and Freja were the main coders of the project, and I continued to make additional improvements after the exam had concluded.
