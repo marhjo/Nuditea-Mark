@@ -1,6 +1,6 @@
 # Nuditea Webpage Redesign
 
-Welcome to the repository for the Nuditea webpage redesign, a project completed as part of my 2nd exam for the 2nd semester.
+Welcome to the repository for the Nuditea webpage redesign, a project completed as part of my exam for the 2nd semester.
 
 ## Project Overview
 
